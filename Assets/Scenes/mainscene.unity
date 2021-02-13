@@ -394,7 +394,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8fe609c4911afa54392239563cb7a49a, type: 3}
       propertyPath: m_Name
-      value: mesh_caution_wetfloor
+      value: wetfloor_caution
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8fe609c4911afa54392239563cb7a49a, type: 3}
       propertyPath: m_RootOrder
@@ -12201,31 +12201,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.63
+      value: 0.691
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.624
+      value: 1.074
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.36
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6544362
+      value: 0.5302841
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.031310707
+      value: -0.41735402
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000037252903
+      value: -0.38351655
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7554687
+      value: 0.63049936
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12233,7 +12233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 2.714
+      value: -69.037
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d47e9697a1edf004980516e303f52155, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -19749,6 +19749,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1d503b89d5aef134282d8fc38e41f52c, type: 3}
   m_PrefabInstance: {fileID: 1236820256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1237340968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d47e9697a1edf004980516e303f52155, type: 3}
+  m_PrefabInstance: {fileID: 758972263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1237340969
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237340968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf767934cec53c249ae4bc468c1c2dbd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1240306706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1530b6e8012e5ad44972efb447aa7d11, type: 3}
