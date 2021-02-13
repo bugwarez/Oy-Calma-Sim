@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerMain : MonoBehaviour
 {
     public GameObject AICamera;
+    public GameObject kursuCamera;
     public GameObject MyCamera;
     public GameObject zarf;
     public GameObject Atom;
@@ -21,10 +22,12 @@ public class PlayerMain : MonoBehaviour
     public Text EnemyText;
 
 
+    public AudioSource ses;
+
+
     void Update()
     {
 
-    
         if (Input.GetKey(KeyCode.Space)) {
 			AICamera.SetActive(true);
             MyCamera.SetActive(false);
@@ -38,8 +41,10 @@ public class PlayerMain : MonoBehaviour
 
     private void Start()
     {
+     //   ses = GetComponent<AudioSource>();
         EnemyText.text ="Rakibin oyu = " + EnemySkor.ToString();
         myText.text ="Oyunuz = "+ mySkor.ToString();
+        
     }
 
 
@@ -99,12 +104,41 @@ public class PlayerMain : MonoBehaviour
                 zarfobje.SetActive(false);
             }
         }
+
+
+
+        if (col.gameObject.tag=="kursu")
+        {
+            if (Input.GetKeyDown(KeyCode.E)) 
+            {
+                kursuCamera.SetActive(true);
+                MyCamera.SetActive(false);
+                ses.Play ();
+                mySkor += 2;
+                myText.text ="Oyunuz = "+ mySkor.ToString();
+                StartCoroutine(kursufunction());
+
+            }
+            
+                
+                
+            
+        }
     }
 
     public IEnumerator atomText()
     {
         yield return new WaitForSeconds(2);
         Atom.SetActive(false);
+        
+    }
+
+    public IEnumerator kursufunction()
+    {
+        yield return new WaitForSeconds(5);
+        kursuCamera.SetActive(false);
+        MyCamera.SetActive(true);
+        ses.Stop ();
         
     }
 
