@@ -9,6 +9,7 @@ TagManager:
   - myoy
   - Atom
   - kursu
+  - enemy
   layers:
   - Default
   - TransparentFX

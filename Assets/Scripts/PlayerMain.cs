@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMain : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMain : MonoBehaviour
     public GameObject zarf;
     public GameObject Atom;
     public GameObject zarfobje;
+    public GameObject WinPanel;
 
     public bool OyCalındı = false;
 
@@ -36,6 +38,11 @@ public class PlayerMain : MonoBehaviour
         {
             AICamera.SetActive(false);
             MyCamera.SetActive(true);
+        }
+        if (EnemySkor == 0)
+        {
+            WinPanel.SetActive(true);   
+            Time.timeScale =0;
         }
     }
 
@@ -142,4 +149,30 @@ public class PlayerMain : MonoBehaviour
         
     }
 
+    public GameObject LosePanel;
+
+    public void OnTriggerEnter(Collider col) {
+        if (col.gameObject.tag=="enemy")
+        {
+            Time.timeScale=0;
+            LosePanel.SetActive(true);
+        }
+    }
+    public GameObject panel1;
+    public GameObject panel2;
+
+
+    public void next()
+    {
+        panel1.SetActive(false);
+        panel2.SetActive(true);
+    }
+    public void kapat()
+    {
+        panel2.SetActive(false);
+    }
+    public void tekaroyna(){
+        SceneManager.LoadScene("mainscene");
+        Time.timeScale=1;
+    }
 }
